@@ -1,0 +1,146 @@
+---
+title: "My Very Fun Markdown"
+author: "Kiran Hegde @ ODSC"
+date: "May 2, 2018"
+output:
+  pdf_document:
+    toc: yes
+  html_document:
+    number_sections: yes
+    toc: yes
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+    pdf_document:
+        toc: yes
+        number_sections: truex
+---
+# Global settings
+Below will set a global settings to cache = TRUE
+
+```{r settings, include=FALSE, }
+knitr::opts_chunk$set(cache = TRUE)
+```
+
+
+#My First section
+
+We started a new section with a hashtag and this is the first paragraph in that section. Spacing is important, so be aware of that. Adding a third sentence so that I have a full paragraph to meet antiquated rules of grammar which might not apply any more. And I'll start a sentence with and. J.D. Salinger rules!!!!!
+
+Leaving a blank line before the next text starts a new paragraph.
+
+# New Section
+
+You start a new section simple by creating a new one with a hashtag. There is no need to close the old section.
+
+# Subsections
+
+Creating subsections is just as easy, we simply use two hastags.
+
+## First Subsection
+
+We started a Subsection, with a section with 2 hashtags and didn't need to do anything to the outer section.
+
+## Another subsection
+
+Another subsection is just like making the first subsection, just use two hashtags. Again, no need to close the prior subsection
+
+#Back to section
+
+Repeating the point, you start a new section, even after subsections, simply by creating a new one with a single hashtag. No closing anything.
+
+#Formatting Text
+
+_Emphasized Text_
+
+__Strong Text__
+
+___Emphasized and Bold Text___
+
+`anything in backticks looks like computer code, or typewrite text`
+
+# Lists
+
+## Unordered Lists
+
+ - Apple
+ - Banana
+ - Orange
+ - Kiwi
+ - Durian
+ - Watermelon
+ 
+## Ordered Lists
+
+1. New York
+1. New Jersey
+1. Detriot
+1. Naples
+1. Rome
+
+a. Beer
+a. Guiness
+a. Blue Moon
+a. Oberon
+
+1. New York
+1. New Jersy
+1. New Haven
+1. Detroit
+
+## Nested Lists
+
+1. New York
+    1. Coal
+    1. Woood
+    1. Gas
+1. New Jersey
+    - Gas
+    - Wood
+1. Naples
+
+# link
+
+[My website](http://www.hegdekiran.com)
+
+# R Time!!!!!!!!
+# Alt + Ctrl + i
+
+```{r}
+1+1
+
+```
+
+```{r}
+x <-3
+x
+```
+
+```{r}
+x*2
+```
+
+Let's give our chunks names.
+```{r simple-code-ex}
+x*3 + 7
+```
+Let's show the results of a chunk without seeing the code.
+
+```{r another-example,echo=FALSE}
+5*x + 4
+```
+
+# Plots
+
+```{r load-ggplot2}
+library(ggplot2)
+```
+
+
+```{r plot-diamonds, fig.align='center', fig.cap='A Scatter plot of diamond price vs size , color coded according to diamond cut.', cache=TRUE }
+
+ggplot(diamonds, aes(x=carat, y=price, color=cut)) +
+    geom_point()
+```
+
+
